@@ -1,15 +1,15 @@
 <?php
-//session_start();
+session_start();
 //tiến hành kiểm tra là người dùng đã đăng nhập hay chưa
 //nếu chưa, chuyển hướng người dùng ra lại trang đăng nhập
-//if (!isset($_SESSION['email'])) {
-	// header('Location: backend/login.php');
+if (!isset($_SESSION['email'])) {
+	 header('Location: backend/login.php');
+}
 
 ?>
-
-<?php include "backend/header.php" ?>
 <?php include "backend/connection.php" ?>
-<body>
+<?php include "backend/header.php" ?>
+body>
 	<!-----begin header----->
 	<header>
 		<div class="container" id="topbar">
