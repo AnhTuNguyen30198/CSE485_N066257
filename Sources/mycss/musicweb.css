@@ -1,0 +1,366 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	font-family: "Arial", sans-serif;
+	color: black;
+	background-color: #eae8e6;
+}
+
+/**
+ * Header
+ */
+
+header{
+	background: #232B2B;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+}
+header #topbar .row{
+	padding-top: 0.4em;
+	padding-bottom: 0.2em;
+}
+
+/**
+ * headerlogo
+ */
+header #topbar .row #headerlogo img{
+	width: 100%;
+	height: 2.5em;
+}
+
+/**
+ * headerSearch
+ */
+header #topbar .row #headersearch form{
+	overflow: auto;
+}
+
+header #topbar .row #headersearch input{
+	width: 88%;
+	height: 2.5em;
+	padding-left: 0.4em;
+	border: 2px solid black;
+	border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
+	float: left;
+	background-color: #eae8e6;
+} 
+header #topbar .row #headersearch input:focus{
+	background-color: white;
+}
+header #topbar .row #headersearch form #btn{
+	width: 12%;
+	height: 2.5em;
+	display: block;
+	background-color: #DC3D24;
+	float: left;
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	border: 2px solid black;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}  
+header #topbar .row #headersearch #btn .icon .fa{
+	font-size: 1.5em;
+	color: #232B2B;
+}
+header #topbar .row #headersearch form #btn:hover{
+	opacity: 0.8;
+}
+header #topbar .row #headersearch #btn .icon .fa:hover{
+	font-size: 1.8em;
+	color: black;
+}
+
+/**
+ * headerMenu
+ */
+header #topbar .row #headermenu nav ul{
+	line-height: 2.5em;
+	height: 2.5em;
+	width: 100%;
+	list-style-type: none;
+	text-align: center;
+	overflow: auto;
+	border-radius: 3px;
+}
+header #topbar .row #headermenu nav ul li{
+	float: left;
+	width: 25%;
+	border-left: 1px solid black;
+}
+header #topbar .row #headermenu nav ul li a{
+	background-color: #DC3D24;
+	display: block;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 600;
+	color: #eae8e6;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+
+header #topbar .row #headermenu nav ul li a:hover{
+	color: black;
+	opacity: 0.8;
+}
+
+/**
+ * Main
+ */
+main{
+	background-color: white;
+	margin: 0 14em;
+}
+/**
+ * content1
+ * 
+ * Big Img
+ */
+main .content1{
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	margin-top: 3px;
+	border-top: 3em solid #232B2B;
+}
+main .content1 .row{
+	margin-top: 0.2em;
+}
+main .container .row #bigimg{
+	padding: 0;
+	margin: 0;
+}
+main .container .row #bigimg a{
+	border-bottom: 4px none;
+}
+main .container .row #bigimg a img{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+}
+
+main .container .row #leftmenu{}
+main .container .row #leftmenu nav{}
+main .container .row #leftmenu nav ul{} 
+main .container .row #leftmenu nav ul li{
+	list-style-type: none;
+}
+main .container .row #leftmenu nav ul li a{
+	display: block;
+	text-decoration: none;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+main .container .row #leftmenu nav ul li a:hover{
+	opacity: 0.9;
+	image-rendering: pixelated;
+	filter: drop-shadow(0 0 2em #38300A);
+}
+main .container .row #leftmenu nav ul li a img:hover{
+	border: 2px solid black;
+}
+main .container .row #leftmenu nav ul li a img{
+	width: 100%;
+	height: auto;
+}
+main .container .row .box1{
+	padding-bottom: 0.4em;
+}
+main .container .row .box1 h2{
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5em;
+	display: block;
+	background-color: #DC3D24;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+main .container .row .box1 h2:hover{
+	color: black;
+	background-color: #aa2f1b;
+	border: 1px solid black;
+}
+
+main .container .row .ndbox1{
+	padding: 0.5em 0.4em;
+	background-color: #e7b96d;
+	height: 45.7em;
+	border-radius: 4px;
+
+}
+
+main .content1{
+	border-bottom: 4px none;
+}
+
+/**
+ * content2
+ */
+main .content2{
+	padding: 0;
+	margin: 0;
+}
+main .content2 .container .row #musicstyle{
+	background-color: #232B2B;
+	width: 100%;
+	height: auto;
+}
+main .content2 .container .row #musicstyle a{
+	display: block;
+	text-decoration: none;
+}
+main .content2 .container .row #musicstyle a h1{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+main .content2 .content21, .content22{
+	margin-top: 0.6em;
+}
+main .content2 #row_content22, #row_content22{
+	overflow: auto;
+}
+main .content2 .container .box2{
+	width: 23.5%;
+	float: left;
+	line-height: 5em;
+	height: 25em;
+	margin: 0 0.5em;
+	border-radius: 4px;
+	background-color: #e7b96d;
+}
+main .content2 .container #blue, #latin{
+	border-right: none;
+	float: right;
+}
+main .content2 .container .box2 h2{
+	display: block;
+	text-align: center;
+	background-color: 
+	border-radius: 4px;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	background-color: #DC3D24;
+	border-radius: 4px;
+}
+
+main .content2 .container .box2 h2:hover{
+	color: black;
+	background-color: #aa2f1b;
+	border: 1px solid black;
+}
+main .content2 .container .box2 .ndbox2{
+	line-height: 4em;
+	padding: 0.2em 0.4em;
+	overflow: auto;
+}
+/**
+ * footer
+ */
+footer{
+	border-top: 0.5em solid #939393;
+	height: 20em;
+	width: 100%;
+	background-color: #252525;
+}
+footer .container{}
+footer .container .row{
+	margin-top: 3em;
+}
+footer .container .row .left{
+	width: 100%;
+	height: 15em;
+}
+footer .container .row .left .footerlogo{}
+footer .container .row .left .footerlogo a img{
+	display: block;
+	width: 25em;
+	height: auto;
+}
+
+footer .container .row .left .social{
+	margin-top: 1.5em;
+}
+footer .container .row .left .social .socialname{}
+footer .container .row .left .social .socialname li{
+	list-style-type: none;
+	display: inline-block;
+}
+footer .container .row .left .social .socialname li a{
+	display: block;
+	text-decoration: none;
+}
+footer .container .row .left .social .socialname li a i.fa{
+	font-size: 2.5em;
+	color: white;
+	text-align: center;
+	margin-right: 0.5em;
+	position: relative;
+	right: -3.5em;
+}
+
+footer .container .row .right{
+	padding: 0 2em;
+}
+footer .container .row .right .footermenu ul{
+
+}
+footer .container .row .right .footermenu ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+footer .container .row .right .footermenu ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 0.7em;
+	font-size: 0.9em;
+}
+footer .container .row .right .footermenu ul li a:hover{
+	color: #DC3D24;
+}
+
+
+
+
+
+
+/**
+ * Nut ve dau trang
+ */
+.up .uptop{
+	position: fixed;
+	right: 0.3em;
+	bottom: 0.3em;
+	display: block;
+	height: 3em;
+	width: 3em;
+	border-radius: 4px;
+	background-color: #bdbdbd;
+	z-index: 9999;
+}
+.up .uptop .fa-arrow-up{
+	font-size: 2.7em;
+	color: white;
+	position: absolute;
+	right: 4px;
+	top: 2px;
+}
+.up .uptop:hover{
+	background-color: #052645;
+}
