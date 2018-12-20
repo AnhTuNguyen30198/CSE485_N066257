@@ -2,7 +2,6 @@
 <?php
 session_start();
 ?>
-	
 <html>
 
 <head>
@@ -32,13 +31,15 @@ session_start();
 				echo "<script>alert('tên đăng nhập hoặc mật khẩu không đúng !')</script>";
 			}
 			else{
-				//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-				$_SESSION['email'] = $email;
+                //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
+                $data = mysqli_fetch_array($query);
+                $_SESSION['email'] = $email;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
+                $_SESSION["username"]=$data["email"];
                 header('Location: ../index.php');
 			}
-		}
+        }
 	?>
     <div class="login-dark">
         <form method="post" action="login.php">
