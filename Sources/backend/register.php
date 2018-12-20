@@ -19,23 +19,25 @@
 				$username =  $_POST["username"];
 	   			$email = $_POST["email"];
 				$password = $_POST["password"];
+				$password_repeat = $_POST["password-repeat"];
 	  			//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
 				  if ($password == "" || $email == "" || $username == "") {
 					   echo "<script>alert('bạn vui lòng nhập đầy đủ thông tin!')</script>";
-	  			}else{
+					}
+				  elseif ($password != $password_repeat) {
+						echo "<script>alert('Nhập lại mật khẩu không khớp')</script>";
+					}
+				  else{
 	  					// Kiểm tra tài khoản đã tồn tại chưa
-	  					$sql="select * from users where email='$email' and username = '$username'";
+	  					$sql="SELECT * FROM users WHERE email='$email' AND username = '$username'";
 						$kt=mysqli_query($conn, $sql);
 	 
 						if(mysqli_num_rows($kt)  > 0){
 							echo "<script>alert('Tài khoản đã tồn tại!')</script> ";
 						}else{
 							//thực hiện việc lưu trữ dữ liệu vào db
-		    				$sql = "INSERT INTO users(
-							username,
-							email,
-		    					password
-		    					) VALUES (
+		    				$sql = "INSERT INTO users(username,email,password) 
+							VALUES (
 							'$username',
 		    					'$email',
 		    					'$password'
@@ -54,8 +56,8 @@
             <div class="image-holder" ></div>
             <form method="post" action="register.php">
                 <h2 class="text-center"><strong>Tạo</strong> tài khoản</h2>
-      			<div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" required></div>
-				<div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" required></div>
+      			<div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" required></div>
+				<div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" required></div>
                 <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Mật khẩu" required></div>
                 <div class="form-group"><input class="form-control" type="password" name="password-repeat" placeholder="Nhập lại mật khẩu" required></div>
                 <div class="form-group">

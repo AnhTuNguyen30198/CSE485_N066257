@@ -19,12 +19,12 @@ session_start();
 	// Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
 	if (isset($_POST["btn_submit"])) {
 		// lấy thông tin người dùng
-		$email = $_POST["email"];
+		$username = $_POST["username"];
 		$password = $_POST["password"];
 		//làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt 
 		//mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
 		
-			$sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password' ";
+			$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
 			$query = mysqli_query($conn,$sql);
 			$num_rows = mysqli_num_rows($query);
 			if ($num_rows==0) {
@@ -33,10 +33,10 @@ session_start();
 			else{
                 //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
                 $data = mysqli_fetch_array($query);
-                $_SESSION['email'] = $email;
+                $_SESSION['username'] = $username;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                $_SESSION["username"]=$data["email"];
+                $_SESSION["username"]=$data["username"];
                 header('Location: ../index.php');
 			}
         }
@@ -45,7 +45,7 @@ session_start();
         <form method="post" action="login.php">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Mật khẩu" size="30"></div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="btn_submit">Đăng nhập</button>
             </div><a href="register.php" class="forgot">Bạn chưa có tài khoản? <strong>Đăng ký</strong> tại đây</a>
