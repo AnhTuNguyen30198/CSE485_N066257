@@ -46,15 +46,13 @@
 <!-- 							<li><a href="backend/upload.php">Cập nhật</a></li> -->
 							<?php
 								if (isset($_SESSION["username"])) {
-									echo "Chào " .$_SESSION['username'];
 									echo "<li><a href='backend/logout.php'>Đăng xuất</a></li>";
 									echo "<li><a href=''>Upload</a></li>";
+									echo "<li><a href =''>".$_SESSION['username']."</a></li>";
 								} else {
 									echo "<li><a href='backend/login.php'>Đăng nhập</a></li>";
 									echo "<li><a href='backend/register.php'>Đăng ký</a></li>";
-									
 								}
-								
 							?>
 						</ul>	
 					</nav>	
