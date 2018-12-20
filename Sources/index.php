@@ -1,67 +1,6 @@
-<?php
-session_start();
-//tiến hành kiểm tra là người dùng đã đăng nhập hay chưa
-//nếu chưa, chuyển hướng người dùng ra lại trang đăng nhập
-if (!isset($_SESSION['email'])) {
-	 header('Location: backend/login.php');
-}
 
-?>
 <?php include "backend/connection.php" ?>
 <?php include "backend/header.php" ?>
-body>
-	<!-----begin header----->
-	<header>
-		<div class="container" id="topbar">
-			<!-----Header Logo----->
-			<div class="row">
-				<div class="col-md-2" id="headerlogo">
-					<a href="#"><img src="img/footerlogo.png" alt="Logo"></a>
-				</div>
-				<!-----Header Search----->
-				<div class="col-md-5" id="headersearch">
- 					<form name="search" method="post">
-	 					<!-----Thanh tim kiem----->
-						<input type="search" name="search" placeholder="Tìm ca khúc, ca sĩ, album,...">
-						<!-----Nut bam tim kiem----->
-						<button id="btn" type="submit">
-							<span class="icon">
-								<i class="fa fa-search"></i>
-							</span>
-						</button>
-					</form>
-				</div>
-				<!-----Upload, Sign in, Sign up----->
-				<div class="col-md-5" id="headermenu">
-					<nav>
-						<ul>
-							<!-- <li><a href="">Sưu Tập</a></li> -->
-							<!-----Upload----->
-<!-- 							<li><a href="backend/upload.php">Cập nhật</a></li> -->
-							<!-----Sign in----->
-							<li>
-								<a href="backend/login.php">Đăng nhập</a>
-								<!-- <form action="File PHP" method="get" class="sub-menu">
-									<div class="form-group">
-										<label for="email">Địa chỉ Email:</label>
-										<input type="email" name="email" class="form-control" id="email">
-									</div>
-									<div class="form-group">
-										<label for="pass">Mật khẩu:</label>
-										<input type="password" name="password" class="form-control" id="pass">
-									</div>
-									<button type="submit" class="btn btn-default">Đăng nhập</button>
-								</form> -->
-							</li>
-							<!-----Sign up----->
-							<li><a href="backend/register.php">Đăng ký</a></li>
-						</ul>	
-					</nav>	
-				</div>
-			</div>
-		</div>
-		<!-----End top bar----->
-	</header>
 	<!-----end header----->
 	<!-----Begin Main----->
 	<main>
