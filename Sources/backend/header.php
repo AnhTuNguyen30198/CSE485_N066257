@@ -47,8 +47,8 @@
 							<?php
 								if (isset($_SESSION["username"])) {
 									echo "<li><a href='backend/logout.php'>Đăng xuất</a></li>";
-									echo "<li><a href=''>Upload</a></li>";
-									echo "<li><a href =''>".$_SESSION['username']."</a></li>";
+									echo "<li><a href=''>Cập nhật</a></li>";
+									echo "<li style='width: 13em;'><a href ='' style='background-color: #e7b96d; color: black;'>"."Xin chào ".$_SESSION['username']."!"."</a></li>";
 								} else {
 									echo "<li><a href='backend/login.php'>Đăng nhập</a></li>";
 									echo "<li><a href='backend/register.php'>Đăng ký</a></li>";
