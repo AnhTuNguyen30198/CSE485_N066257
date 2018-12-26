@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 20, 2018 lúc 02:18 PM
--- Phiên bản máy phục vụ: 10.1.37-MariaDB
--- Phiên bản PHP: 7.3.0
+-- Host: 127.0.0.1
+-- Generation Time: Dec 24, 2018 at 06:44 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `trang-web-nghe-nhac`
+-- Database: `trang-web-nghe-nhac`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baihat`
+-- Table structure for table `baihat`
 --
 
 CREATE TABLE `baihat` (
@@ -39,7 +39,7 @@ CREATE TABLE `baihat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `baihat`
+-- Dumping data for table `baihat`
 --
 
 INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `idTheLoai`, `idCaSi`, `idNhom`, `path`, `dangBoi`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `idTheLoai`, `idCaSi`, `idNhom`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `casi`
+-- Table structure for table `casi`
 --
 
 CREATE TABLE `casi` (
@@ -61,7 +61,7 @@ CREATE TABLE `casi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `casi`
+-- Dumping data for table `casi`
 --
 
 INSERT INTO `casi` (`idCasi`, `tenCaSi`, `quocGia`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `casi` (`idCasi`, `tenCaSi`, `quocGia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhombaihat`
+-- Table structure for table `nhombaihat`
 --
 
 CREATE TABLE `nhombaihat` (
@@ -82,7 +82,7 @@ CREATE TABLE `nhombaihat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `nhombaihat`
+-- Dumping data for table `nhombaihat`
 --
 
 INSERT INTO `nhombaihat` (`idNhom`, `tenNhom`) VALUES
@@ -93,7 +93,7 @@ INSERT INTO `nhombaihat` (`idNhom`, `tenNhom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `theloai`
+-- Table structure for table `theloai`
 --
 
 CREATE TABLE `theloai` (
@@ -102,7 +102,7 @@ CREATE TABLE `theloai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `theloai`
+-- Dumping data for table `theloai`
 --
 
 INSERT INTO `theloai` (`idTheLoai`, `tenTheLoai`) VALUES
@@ -118,29 +118,31 @@ INSERT INTO `theloai` (`idTheLoai`, `tenTheLoai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-  `idUser` int(10) NOT NULL,
-  `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+  `idUser` int(11) NOT NULL,
+  `username` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phanquyen` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`idUser`, `username`, `email`, `password`) VALUES
-(0, 'vietthuan', 'vietthuan98@gmail.com', '123123');
+INSERT INTO `users` (`idUser`, `username`, `email`, `password`, `phanquyen`) VALUES
+(1, 'atnguyen', 'atnguyen30198@gmail.com', 'anhtu123', 0),
+(2, 'admin', 'atnguyen301297@gmail.com', 'ThuanTu', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `baihat`
+-- Indexes for table `baihat`
 --
 ALTER TABLE `baihat`
   ADD PRIMARY KEY (`idBaiHat`),
@@ -149,40 +151,49 @@ ALTER TABLE `baihat`
   ADD KEY `idNhomBaiHat` (`idNhom`);
 
 --
--- Chỉ mục cho bảng `casi`
+-- Indexes for table `casi`
 --
 ALTER TABLE `casi`
   ADD PRIMARY KEY (`idCasi`);
 
 --
--- Chỉ mục cho bảng `nhombaihat`
+-- Indexes for table `nhombaihat`
 --
 ALTER TABLE `nhombaihat`
   ADD PRIMARY KEY (`idNhom`);
 
 --
--- Chỉ mục cho bảng `theloai`
+-- Indexes for table `theloai`
 --
 ALTER TABLE `theloai`
   ADD PRIMARY KEY (`idTheLoai`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`idUser`),
-  ADD UNIQUE KEY `username` (`username`,`email`);
+  ADD PRIMARY KEY (`idUser`);
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `baihat`
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `baihat`
 --
 ALTER TABLE `baihat`
   ADD CONSTRAINT `baihat_ibfk_1` FOREIGN KEY (`idCaSi`) REFERENCES `casi` (`idCasi`),
-  ADD CONSTRAINT `baihat_ibfk_2` FOREIGN KEY (`idTheLoai`) REFERENCES `theloai` (`idtheloai`),
+  ADD CONSTRAINT `baihat_ibfk_2` FOREIGN KEY (`idTheLoai`) REFERENCES `theloai` (`idTheLoai`),
   ADD CONSTRAINT `baihat_ibfk_3` FOREIGN KEY (`idNhom`) REFERENCES `nhombaihat` (`idNhom`);
 COMMIT;
 
