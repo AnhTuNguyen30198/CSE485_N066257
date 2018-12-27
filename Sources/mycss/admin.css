@@ -1,0 +1,54 @@
+body{
+	background: url('../img/admin.jpg');
+	background-repeat: none;
+	background-size: 100%;
+}
+main{
+	padding: 5em 3em 3em 3em;
+	font-size: 1.5em;
+}
+
+.choose{
+	padding: 6.75px	13.5px;
+	border: 1px solid #939393;
+	border-radius: 3px;
+	margin-left: 2em;
+}
+
+th, td {
+	text-align: center;
+	border: 2px solid black;
+	padding: 0.1em
+}
+
+body header #topbar .row #headerlogo #headermenu nav ul li{
+	position: relative;	
+	overflow: visible;
+}
+
+#sub-menu li a{
+	width: 15em;
+	background-color: black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
+#sub-menu li {
+	display: contents;
+	border-bottom: 1px solid black;
+}
+
+#sub-menu{
+	height: 7.6em !important;
+	width: 15em !important;
+	display: none;
+	position: absolute;
+	overflow: visible !important;
+	background: black;
+}
+
+#sub:hover #sub-menu{
+	display: block;
+	
+}
