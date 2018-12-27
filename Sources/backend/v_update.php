@@ -11,7 +11,6 @@
 
 <?php	include "connection.php";?>
 <?php include "update.php"?>
-<?php include "view.php"?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +43,7 @@
 					<nav>
 						<ul>
 							<li style="width: 13em; background-color: #e7b96d;"><span>Xin chào <b >Admin!</b></span></li>
-							<li><a href="v_update.php">Cập nhật</a></li>
+							<li><a href="#">Cập nhật</a></li>
 							<li><a href="v_view.php">Xem dữ liệu</a></li>
 							<li><a href="logout.php">Đăng xuất</a></li>
 						</ul>	
@@ -56,7 +55,7 @@
 	<main>
 	<!--Cập nhật dữ liệu cho database-->
 		<div id="capnhat">
-			<h1>Thêm bài hát</h1>
+			<h1>Cập nhật bài hát</h1>
 			 <form action="admin.php" method="post">
 			 
 				  <div class="form-group">
@@ -103,54 +102,6 @@
 				  </div>
 				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-them">Thêm bài hát</button>		
 			</form>
-			<div id="sua">
-			<h1>Sửa thông tin bài hát</h1>
-			 <form action="admin.php" method="post">
-			 
-				  <div class="form-group">
-				    <label for="" class="la-bel">Tên ca khúc</label>
-				    <input type="text" class="form-control" id="t" placeholder="Tên bài hát" name="tenBaiHat" maxlength="30" required>
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Ca sĩ</label>
-				    <input type="text" class="form-control" id="" placeholder="Ca sĩ" name="tenCaSi" maxlength="30">
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Quốc gia</label>
-				    <input type="text" class="form-control" id="" placeholder="Quốc gia" name="quocGia" maxlength="30">
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Thể loại</label>
-				    <select class="choose" name="theLoai">
-					  <option value="jazz">Jazz</option>
-					  <option value="pop">Pop</option>
-					  <option value="rock">Rock</option>
-					  <option value="blue">Blue</option>
-					  <option value="soul">Soul</option>
-					  <option value="hiphop">Hip Hop</option>
-					  <option value="folk">Folk</option>
-					  <option value="latin">Latin</option>
-					 </select>
-				   </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Nhóm ca khúc</label>
-				    <select  class="choose" name="tenNhom">
-					  <option value="vpop">V-Pop</option>
-					  <option value="kpop">K-Pop</option>
-					  <option value="usuk">Us-Uk</option>
-					</select>
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Đường dẫn</label>
-				    <input type="text" class="form-control" id="sources" placeholder="Đường dẫn" name="path">
-				  </div>
-				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-sua">Sửa</button>		
-			</form>
 		<!--Xóa bài hát trong Database-->
 	<div id="xoa">	
 		<h1>Xóa bài hát</h1>
@@ -168,9 +119,9 @@
 			</form>
 	</div>
 	<!--Xem dữ liệu cho database-->
-		<div style="margin-top: 2em; padding-top: 2em; border-top: 2px solid black;" id="view">
+		<!-- <div style="margin-top: 2em; padding-top: 2em; border-top: 2px solid black;" id="view">
 			<h1>Xem dữ liệu</h1>
-		</div>
+		</div> -->
 	</main>
 </body>
 </html>
