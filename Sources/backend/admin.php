@@ -11,7 +11,9 @@
 
 <?php	include "connection.php";?>
 <?php include "update.php"?>
-<?php include "view.php"?>
+	
+	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +31,7 @@
 	<link rel="stylesheet" type="text/css" href="../mycss/admin.css">
 	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../mycss/admin.js"></script>
 </head>
 <body>
     	<!-----begin header----->
@@ -40,13 +43,19 @@
 					<a href="../index.php"><img src="../img/footerlogo.png" alt="Logo"></a>
 				</div>
 				
-				<div class="col-md-10" id="headermenu">
+				<div class="col-md-5" id="headermenu">
 					<nav>
-						<ul>
+						<ul style="width: 60em;" >
 							<li style="width: 13em; background-color: #e7b96d;"><span>Xin chào <b >Admin!</b></span></li>
-							<li><a href="v_update.php">Cập nhật</a></li>
-							<li><a href="v_view.php">Xem dữ liệu</a></li>
-							<li><a href="logout.php">Đăng xuất</a></li>
+							<li id="sub"><a href="" id="choose-capnhat">Cập nhật</a>
+								<ul id="sub-menu">
+									<li><a href="#them" id="choose-them">Thêm bài hát</a></li>
+									<li><a href="#xoa" id="choose-xoa">Xóa bài hát</a></li>
+									<li><a href="#sua" id="choose-sua">Sửa bài hát</a></li>
+								</ul>
+							</li>
+							<li><a href="#view" id="choose-view">Xem dữ liệu</a></li>
+							<li><a href="logout.php">Đăng xuất</a></li>		
 						</ul>	
 					</nav>	
 				</div>
@@ -55,8 +64,8 @@
 	</header>
 	<main>
 	<!--Cập nhật dữ liệu cho database-->
-		<div id="capnhat">
-			<h1>Thêm bài hát</h1>
+		<div id="them">
+			<h1>Cập nhật bài hát</h1>
 			 <form action="admin.php" method="post">
 			 
 				  <div class="form-group">
@@ -99,11 +108,13 @@
 				  
 				  <div class="form-group">
 				    <label for="" class="la-bel">Đường dẫn</label>
-				    <input type="text" class="form-control" id="sources" placeholder="Đường dẫn" name="path">
+				    <input type="text" class="form-control" id="" placeholder="Đường dẫn" name="path">
 				  </div>
 				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-them">Thêm bài hát</button>		
 			</form>
-			<div id="sua">
+		</div>
+		<!--Sua bai haT -->
+		<div id="sua" style="display: none;">
 			<h1>Sửa thông tin bài hát</h1>
 			 <form action="admin.php" method="post">
 			 
@@ -149,27 +160,68 @@
 				    <label for="" class="la-bel">Đường dẫn</label>
 				    <input type="text" class="form-control" id="sources" placeholder="Đường dẫn" name="path">
 				  </div>
-				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-sua">Sửa</button>		
+				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-sua">Sửa bài hát</button>		
 			</form>
+		</div>
 		<!--Xóa bài hát trong Database-->
-	<div id="xoa">	
-		<h1>Xóa bài hát</h1>
-			<form method="POST" action="admin.php">
-				 <div class="form-group">
-				    <label for="" class="la-bel">Tên ca khúc</label>
-				    <input type="text" class="form-control" id="t" placeholder="Tên bài hát" name="tenBaiHat" maxlength="30" required>
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="" class="la-bel">Ca sĩ</label>
-				    <input type="text" class="form-control" id="" placeholder="Ca sĩ" name="tenCaSi" maxlength="30">
-				  </div>
-				  <button type="submit" class="btn btn-secondary btn-lg xoa " name="btn-xoa">Xóa bài hát</button>
-			</form>
-	</div>
+		<div id="xoa" style="display: none;">	
+			<h1>Xóa bài hát</h1>
+				<form method="POST" action="admin.php">
+					 <div class="form-group">
+					    <label for="" class="la-bel">Tên ca khúc</label>
+					    <input type="text" class="form-control" id="t" placeholder="Tên bài hát" name="tenBaiHat" maxlength="30" required>
+					  </div>
+					  
+					  <div class="form-group">
+					    <label for="" class="la-bel">Ca sĩ</label>
+					    <input type="text" class="form-control" id="" placeholder="Ca sĩ" name="tenCaSi" maxlength="30">
+					  </div>
+					  <button type="submit" class="btn btn-secondary btn-lg xoa " name="btn-xoa">Xóa bài hát</button>
+				</form>
+		</div>
+		
 	<!--Xem dữ liệu cho database-->
-		<div style="margin-top: 2em; padding-top: 2em; border-top: 2px solid black;" id="view">
+		<div style="display: none;" id="view" >
 			<h1>Xem dữ liệu</h1>
+			<table  id="viewcontent" style="font-size: 0.8em; overflow: auto; width: 100%;">
+			<tr>
+				<th>ID bài hát </th>
+				<th>Bài hát </th>
+				<th>Thể loại</th>
+				<th>Ca sĩ</th>
+				<th>Nhóm</th>
+				<th>Quốc gia</th>
+				<!--<th>Đường dẫn</th>-->
+				<th>Đăng bởi</th>
+			</tr>
+			<?php
+			
+				include "connection.php";
+				mysqli_set_charset($conn,"UTF8");
+				$sql = "SELECT * FROM baihat;";
+				$kt = mysqli_query($conn, $sql);
+				if(mysqli_num_rows($kt)>0 ){
+					while($row = mysqli_fetch_assoc($kt)){
+						
+					
+			?>
+				<tr>
+					<td><?php echo $row['idBaiHat']  ?></td>
+					<td><?php echo $row['tenBaiHat']  ?></td>
+					<td><?php echo $row['tenTheLoai']  ?></td>
+					<td><?php echo $row['tenCaSi']  ?></td>
+					<td><?php echo $row['tenNhom']  ?></td>
+					<td><?php echo $row['quocGia']  ?></td>
+					<!--<td><?php //echo $row['path']  ?></td>-->
+					<td><?php echo $row['dangBoi']  ?></td>
+				</tr>
+			<?php
+				
+					}
+				}
+			?>
+			</table>
+			
 		</div>
 	</main>
 </body>
