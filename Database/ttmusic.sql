@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2018 at 09:42 AM
+-- Generation Time: Dec 24, 2018 at 06:44 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -29,23 +29,91 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `baihat` (
-  `idBaiHat` int(11) NOT NULL,
-  `tenBaiHat` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tenTheLoai` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tenCaSi` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tenNhom` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `quocGia` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `path` text COLLATE utf8mb4_unicode_ci,
-  `dangBoi` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+  `idBaiHat` int(10) NOT NULL,
+  `tenBaiHat` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idTheLoai` int(10) NOT NULL,
+  `idCaSi` int(10) NOT NULL,
+  `idNhom` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dangBoi` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `baihat`
 --
 
-INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `tenTheLoai`, `tenCaSi`, `tenNhom`, `quocGia`, `path`, `dangBoi`) VALUES
-(5, 'Ánh nắng của anh', 'jazz', 'Đức Phúc', 'vpop', 'Việt Nam', 'Ánh nắng của anh', 'admin'),
-(6, 'Thằng Điên', 'jazz', 'Justatee', 'vpop', 'Việt Nam', 'Thằng điên', 'admin');
+INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `idTheLoai`, `idCaSi`, `idNhom`, `path`, `dangBoi`) VALUES
+(0, 'Nơi này có anh', 1, 0, '0', 'https://www.nhaccuatui.com/mh/auto/JzDZ5BW4RSTI', ''),
+(1, 'Gửi ngàn lời yêu', 1, 1, '0', 'https://www.nhaccuatui.com/mh/auto/r3CJejSG3lkn', ''),
+(2, 'She will be loved', 1, 3, '2', 'https://www.nhaccuatui.com/mh/auto/4SF8VzM4cY', ''),
+(3, 'Clown', 5, 2, '1', 'https://www.nhaccuatui.com/mh/auto/pcGiy73p1Qfl', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `casi`
+--
+
+CREATE TABLE `casi` (
+  `idCasi` int(10) NOT NULL,
+  `tenCaSi` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quocGia` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `casi`
+--
+
+INSERT INTO `casi` (`idCasi`, `tenCaSi`, `quocGia`) VALUES
+(0, 'Sơn Tùng MTP', 'Việt Nam'),
+(1, 'Tuấn Hưng', 'Việt Nam'),
+(2, 'Leessang', 'Hàn Quốc'),
+(3, 'Maroon 5', 'Mỹ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nhombaihat`
+--
+
+CREATE TABLE `nhombaihat` (
+  `idNhom` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenNhom` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `nhombaihat`
+--
+
+INSERT INTO `nhombaihat` (`idNhom`, `tenNhom`) VALUES
+('0', 'vpop'),
+('1', 'kpop'),
+('2', 'usuk');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `theloai`
+--
+
+CREATE TABLE `theloai` (
+  `idTheLoai` int(10) NOT NULL,
+  `tenTheLoai` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `theloai`
+--
+
+INSERT INTO `theloai` (`idTheLoai`, `tenTheLoai`) VALUES
+(0, 'jazz'),
+(1, 'pop'),
+(2, 'rock'),
+(3, 'blue'),
+(4, 'soul'),
+(5, 'hiphop'),
+(6, 'folk'),
+(7, 'latin');
 
 -- --------------------------------------------------------
 
@@ -77,7 +145,28 @@ INSERT INTO `users` (`idUser`, `username`, `email`, `password`, `phanquyen`) VAL
 -- Indexes for table `baihat`
 --
 ALTER TABLE `baihat`
-  ADD PRIMARY KEY (`idBaiHat`);
+  ADD PRIMARY KEY (`idBaiHat`),
+  ADD KEY `idCaSi` (`idCaSi`),
+  ADD KEY `idTheLoai` (`idTheLoai`),
+  ADD KEY `idNhomBaiHat` (`idNhom`);
+
+--
+-- Indexes for table `casi`
+--
+ALTER TABLE `casi`
+  ADD PRIMARY KEY (`idCasi`);
+
+--
+-- Indexes for table `nhombaihat`
+--
+ALTER TABLE `nhombaihat`
+  ADD PRIMARY KEY (`idNhom`);
+
+--
+-- Indexes for table `theloai`
+--
+ALTER TABLE `theloai`
+  ADD PRIMARY KEY (`idTheLoai`);
 
 --
 -- Indexes for table `users`
@@ -90,16 +179,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `baihat`
---
-ALTER TABLE `baihat`
-  MODIFY `idBaiHat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `baihat`
+--
+ALTER TABLE `baihat`
+  ADD CONSTRAINT `baihat_ibfk_1` FOREIGN KEY (`idCaSi`) REFERENCES `casi` (`idCasi`),
+  ADD CONSTRAINT `baihat_ibfk_2` FOREIGN KEY (`idTheLoai`) REFERENCES `theloai` (`idTheLoai`),
+  ADD CONSTRAINT `baihat_ibfk_3` FOREIGN KEY (`idNhom`) REFERENCES `nhombaihat` (`idNhom`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
