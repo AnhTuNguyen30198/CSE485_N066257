@@ -43,3 +43,4 @@ chooseView.addEventListener('click',function(){
 	view.style.display = "block";
 },false);
 }
+
