@@ -199,7 +199,7 @@ main .container .row .box1 h2:hover{
 main .container .row .ndbox1{
 	padding: 0.5em 0.4em;
 	background-color: #e7b96d;
-	height: 45.7em;
+	height: 30.5em;
 	border-radius: 4px;
 
 }
@@ -236,7 +236,7 @@ main .content2 #row_content22, #row_content22{
 	overflow: auto;
 }
 main .content2 .container .box2{
-	width: 23.5%;
+	width: 23%;
 	float: left;
 	line-height: 5em;
 	height: 25em;
