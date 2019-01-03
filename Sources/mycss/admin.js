@@ -4,9 +4,9 @@ var chooseSua	=	document.getElementById('choose-sua');
 var chooseView	=	document.getElementById('choose-view');
 
 var them = document.getElementById('them');
-var xoa = document.getElementById('xoa')
-var sua = document.getElementById('sua')
-var view = document.getElementById('view')
+var xoa = document.getElementById('xoa');
+var sua = document.getElementById('sua');
+var view = document.getElementById('view');
 
 if(chooseThem){
 chooseThem.addEventListener('click',function(){
