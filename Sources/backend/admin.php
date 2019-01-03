@@ -29,9 +29,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap	.min.css">
 	<link rel="stylesheet" type="text/css" href="../mycss/musicweb.css">
 	<link rel="stylesheet" type="text/css" href="../mycss/admin.css">
-	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../mycss/admin.js"></script>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js" async></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" async></script>
+	<script type="text/javascript" src="../mycss/admin.js" async></script>
+
 </head>
 <body>
     	<!-----begin header----->

@@ -12,8 +12,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	<!-----Font Awesome----->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="mycss/musicweb.css">
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Sources/assets/js/jquery-3.3.1.min.js" async></script>
+	<script type="text/javascript" src="../Sources/assets/css/bootstrap/css/bootstrap.min.css" async></script>
+	<script type="text/javascript" src="../Sources/backend/vpopKpopUsuk.js" async></script>
 </head>
 <body>
 	<!-----begin header----->
