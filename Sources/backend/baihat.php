@@ -6,6 +6,36 @@ session_start();
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		#gohome:hover{
+			background: #e7b96d !important;
+			font-weight: bolder;
+			border-width: 2px !important;
+		}
+
+		audio:hover, audio:focus, audio:active
+		{
+		-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		transform: scale(1.05);
+		}
+		audio
+		{
+		-webkit-transition:all 0.5s linear;
+		-moz-transition:all 0.5s linear;
+		-o-transition:all 0.5s linear;
+		transition:all 0.5s linear;
+		-moz-box-shadow: 2px 2px 4px 0px #006773;
+		-webkit-box-shadow:  2px 2px 4px 0px #006773;
+		box-shadow: 2px 2px 4px 0px #006773;
+		-moz-border-radius:7px 7px 7px 7px ;
+		-webkit-border-radius:7px 7px 7px 7px ;
+		border-radius:7px 7px 7px 7px ;
+		}
+	</style>
 </head>
 <body>
 	<?php
@@ -24,7 +54,7 @@ session_start();
 		padding: 1em 1em 1em 2em;
 		background: #aa2f1b;
 		border-radius: 0.5em;">
-			<label>
+			<label >
 				<h1>
 					<b style="font-size: 0.9em;"> <?php echo $baihathientai['tenBaiHat'] ?></b>
 				</h1>
@@ -48,6 +78,8 @@ session_start();
 	 position: relative; 
 	 left: 6em; 
 	 top: 1em;
+	 border: 1px solid #fcfdfd;
+	 border-radius: 30px;
 	 ;
 	 ">
 	<source type = "audio/mpeg" src="<?php echo $baihathientai['path']; ?>" />
