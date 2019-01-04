@@ -149,20 +149,92 @@
 					<div class="ndsinger ndbox1" id="contentbox3">
 						<div class = "boxvpop">
 							<?php 
-								include"backend/singervpop.php";
-							 ?>
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'vpop'	
+									GROUP BY tenCaSi
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenCaSi']; ?></strong>
+											</a>
+											<br>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy ca sĩ.";
+									}
+								?>
 						 </div>
 
 						 <div class = "boxkpop" style="display: none">
 							<?php 
-								include"backend/singerkpop.php";
-							 ?>	
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'kpop'	
+									GROUP BY tenCaSi
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenCaSi']; ?></strong>
+											</a>
+											<br>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy ca sĩ.";
+									}
+								?>	
 						 </div>
 
 						 <div class = "boxusuk" style="display: none">
 							<?php 
-								include"backend/singerusuk.php";
-							 ?>	
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'usuk'	
+									GROUP BY tenCaSi
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenCaSi']; ?></strong>
+											</a>
+											<br>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy ca sĩ.";
+									}
+								?>	
 						 </div>
 				</div>
 			</div>
