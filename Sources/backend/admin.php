@@ -109,7 +109,7 @@
 				  
 				  <div class="form-group">
 				    <label for="" class="la-bel">Đường dẫn</label>
-				    <input type="text" class="form-control" id="" placeholder="Đường dẫn" name="path">
+				    <input type="text" class="form-control" id="" placeholder="Đường dẫn: baihat/audio_name.mp3" name="path">
 				  </div>
 				 	<button type="submit" class="btn btn-primary btn-lg capnhat" name="btn-them">Thêm bài hát</button>		
 			</form>
