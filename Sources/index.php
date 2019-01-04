@@ -32,21 +32,96 @@
 					<h2>TOP BXH</h2>
 					<div class="ndtopbxh ndbox1" id="contentbox1">
 						<div class = "boxvpop">
-							<?php 
-								include"backend/songsvpop.php";
-							 ?>
+							 <?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'vpop'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 						 </div>
 
 						 <div class = "boxkpop" style="display: none">
 								 <?php 
-									include"backend/songskpop.php";
-								 ?>
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'kpop'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 						 </div>
 
 						 <div class = "boxusuk" style="display: none">
-								  <?php 
-									include"backend/songsusuk.php";
-								 ?>
+								   <?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenNhom = 'usuk'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 						 </div>
 							
 					</div>
@@ -116,36 +191,136 @@
 					<div id="jazz" class="box2">
 				 		<h2>Jazz</h2>
 				 		<div id="ndjazz" class="ndbox2">
-				 			<?php
-				 				include "backend/jazzsong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'jazz'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>
 
 					<div id="pop" class="box2">
 						<h2>Pop</h2>
 				 		<div id="ndpop" class="ndbox2">
-				 			<?php
-				 				include "backend/popsong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'pop'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>
 
 					<div id="rock" class="box2">
 						<h2>Rock</h2>
 				 		<div id="ndrock" class="ndbox2">
-				 			<?php
-				 				include "backend/rocksong.php"
-				 			?>
+<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'rock'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>			
 					</div>
 
 					<div id="blue" class="box2">
 						<h2>Blue</h2>
 				 		<div id="ndblue" class="ndbox2">
-				 			<?php
-				 				include "backend/bluesong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'blue'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>
 				</div>		<!-----End Row2----->
@@ -156,36 +331,136 @@
 					<div id="soul" class="box2">
 						<h2>Soul</h2>
 				 		<div id="ndsoul" class="ndbox2">
-				 			<?php
-				 				include "backend/soulsong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'soul'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>	
 
 					<div id="hiphop" class="box2">
 						<h2>HipHop</h2>
 				 		<div id="ndhiphop" class="ndbox2">
-				 			<?php
-				 				include "backend/hiphopsong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'hiphop'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>
 
 					<div id="folk" class="box2">
 						<h2>Folk</h2>
 				 		<div id="ndfolk" class="ndbox2">
-				 			<?php
-				 				include "backend/folksong.php"
-				 			?>
+<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'folk'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>		
 					</div>
 
 					<div id="latin" class="box2">
 				 		<h2>Latin</h2>
 				 		<div id="ndlatin" class="ndbox2">
-				 			<?php
-				 				include "backend/latinsong.php"
-				 			?>
+				 			<?php 
+									mysqli_set_charset($conn, 'UTF8');
+									$sql = "
+									SELECT tenBaiHat, tenCaSi, idBaiHat
+									FROM baihat
+									WHERE tenTheLoai = 'latin'	
+									";
+
+									$result= mysqli_query($conn, $sql);
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											?>
+
+											<a style="text-decoration: none; color: black;" target="_self" href="backend/baihat.php?idBaiHat=<?php echo $row['idBaiHat'];?>">
+											<strong><?php echo $row['tenBaiHat']; ?></strong>
+											<br>
+											<i><?php echo $row['tenCaSi']; ?></i>
+											<br>
+											</a>
+											<br>
+
+											<?php
+										}
+									}else{
+										echo "Không tìm thấy bài hát.";
+									}
+								?>
 				 		</div>
 					</div>
 				</div>
