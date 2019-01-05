@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 04, 2019 lúc 07:44 PM
+-- Thời gian đã tạo: Th1 05, 2019 lúc 04:50 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.3.0
 
@@ -45,35 +45,35 @@ CREATE TABLE `baihat` (
 
 INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `tenTheLoai`, `tenCaSi`, `tenNhom`, `quocGia`, `path`, `dangBoi`) VALUES
 (5, 'Chạy ngay đi', 'soul', 'Sơn Tùng', 'vpop', 'Việt Nam', 'baihat/chay_ngay_di_son_tung_m_tp_tiger_remix_stage_version_ho_chi_minh_31_12_2018_382261.mp3', 'admin'),
-(6, 'Happy Xmas (War is over)', 'pop', 'Maroon 5', 'usuk', 'Mỹ ', 'baihat/maroon_5_happy_christmas_war_is_over_388509.mp3', 'admin'),
+(6, 'Happy Xmas (War is over)', 'soul', 'Maroon 5', 'usuk', 'Mỹ ', 'baihat/maroon_5_happy_christmas_war_is_over_388509.mp3', 'admin'),
 (7, 'Gạt đi nước mắt', 'pop', 'Noo Phước Thịnh', 'vpop', 'Việt Nam', 'baihat/noo_phuoc_thinh_gat_di_nuoc_mat_ft_tonny_viet_241249.mp3', 'admin'),
 (8, 'Tan', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/mv_tan_tuan_hung.mp3', 'admin'),
 (9, 'Fly me to the moon', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_fly_me_to_the_moon_236083.mp3', 'admin'),
 (10, 'Fire on fire', 'pop', 'Sam Smith', 'usuk', 'Mỹ ', 'baihat/sam_smith_fire_on_fire_350214.mp3', 'admin'),
-(11, 'Friends', 'pop', 'Dido', 'usuk', 'Mỹ ', 'baihat/marshmello_anne_marie_friends_lyrics_224802.mp3', 'admin'),
-(12, 'Imagine', 'pop', ' Ariana Grande', 'usuk', 'Mỹ ', 'baihat/ariana_grande_imagine_388519.mp3', 'admin'),
+(11, 'Friends', 'soul', 'Dido', 'usuk', 'Mỹ ', 'baihat/marshmello_anne_marie_friends_lyrics_224802.mp3', 'admin'),
+(12, 'Imagine', 'latin', ' Ariana Grande', 'usuk', 'Mỹ ', 'baihat/ariana_grande_imagine_388519.mp3', 'admin'),
 (13, 'Birthday', 'pop', 'Katy Perry', 'usuk', 'Mỹ', 'baihat/katy_perry_birthday_lyric_video_260362.mp3', 'admin'),
-(14, 'Cozy Little Christmas', 'pop', 'Katy Perry', 'usuk', 'Mỹ', 'baihat/katy_perry_cozy_little_christmas_audio_clip_388520.mp3', 'admin'),
+(14, 'Cozy Little Christmas', 'soul', 'Katy Perry', 'usuk', 'Mỹ', 'baihat/katy_perry_cozy_little_christmas_audio_clip_388520.mp3', 'admin'),
 (15, 'Part of me ', 'pop', 'Katy Perry', 'usuk', 'Mỹ', 'baihat/katy_perry_part_of_me_official_327306.mp3', 'admin'),
 (16, 'Rise', 'pop', 'Katy Perry', 'usuk', 'Mỹ', 'baihat/katy_perry_rise_official_305936.mp3', 'admin'),
-(17, 'Thank u, next', 'pop', 'Ariana Grande', 'usuk', 'Mỹ', 'baihat/ariana_grande_thank_u_next_299106.mp3', 'admin'),
-(18, 'Into You', 'pop', 'Ariana Grande', 'usuk', 'Mỹ', 'baihat/ariana_grande_thank_u_next_299106.mp3', 'admin'),
+(17, 'Thank u, next', 'latin', 'Ariana Grande', 'usuk', 'Mỹ', 'baihat/ariana_grande_thank_u_next_299106.mp3', 'admin'),
+(18, 'Into You', 'latin', 'Ariana Grande', 'usuk', 'Mỹ', 'baihat/ariana_grande_into_you_227333.mp3', 'admin'),
 (19, 'Tìm lại bầu trời', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/tim_lai_bau_troi_tuan_hung_official_mv_hd_234000.mp3', 'admin'),
 (20, 'Vì người không xứng đáng', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/vi_nguoi_khong_xung_dang_tuan_hung_199718.mp3', 'admin'),
 (21, 'Chỉ còn đêm cuối', 'folk', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/mv_official_chi_con_mot_dem_cuoi_tuan_hung_319082.mp3', 'admin'),
-(22, 'Hối hận trong anh', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/hoi_han_trong_anh_tuan_hung_official_mv_hd_234680.mp3', 'admin'),
+(22, 'Hối hận trong anh', 'soul', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/hoi_han_trong_anh_tuan_hung_official_mv_hd_234680.mp3', 'admin'),
 (23, 'Anh vẫn còn yêu em', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/anh_van_con_yeu_em_tuan_hung_388523.mp3', 'admin'),
-(24, 'Nắm lấy tay anh', 'pop', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/nam_lay_tay_anh_tuan_hung_mv_official_224687.mp3', 'admin'),
-(25, 'I love you baby', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_i_love_you_baby_223697.mp3', 'admin'),
-(26, 'You are love', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_i_love_you_baby_223697.mp3', 'admin'),
+(24, 'Nắm lấy tay anh', 'soul', 'Tuấn Hưng', 'vpop', 'Việt Nam', 'baihat/nam_lay_tay_anh_tuan_hung_mv_official_224687.mp3', 'admin'),
+(25, 'I love you baby', 'blue', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_i_love_you_baby_223697.mp3', 'admin'),
+(26, 'You are love', 'blue', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_i_love_you_baby_223697.mp3', 'admin'),
 (27, 'My way', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_my_way_268632.mp3', 'admin'),
 (28, 'Fly me to the moon', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_fly_me_to_the_moon_236083.mp3', 'admin'),
-(29, 'Cant take my eyes off you', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/can_t_take_my_eyes_off_you_frankie_valli_and_the_4_seasons_223683.mp3', 'admin'),
-(30, 'It had to be you', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_it_had_to_be_you_388530.mp3', 'admin'),
+(29, 'Cant take my eyes off you', 'blue', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/can_t_take_my_eyes_off_you_frankie_valli_and_the_4_seasons_223683.mp3', 'admin'),
+(30, 'It had to be you', 'blue', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_it_had_to_be_you_388530.mp3', 'admin'),
 (31, 'Killing me softly', 'jazz', 'Frank Sinatra', 'usuk', 'Mỹ', 'baihat/frank_sinatra_killing_me_softly_236084.mp3', 'admin'),
 (32, 'Rainy Night in Georgia', 'jazz', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/brook_benton_rainy_night_in_georgia_388534.mp3', 'admin'),
-(33, 'Harry hippie', 'jazz', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/brook_benton_rainy_night_in_georgia_388534.mp3', 'admin'),
-(34, 'Only your love', 'jazz', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/brook_benton_rainy_night_in_georgia_388534.mp3', 'admin'),
+(33, 'Harry hippie', 'blue', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/bobby_womack_harry_hippie_388983.mp3', 'admin'),
+(34, 'Only your love', 'blue', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/brook_benton_rainy_night_in_georgia_388534.mp3', 'admin'),
 (35, 'Endlessly', 'jazz', 'Brook Benton', 'usuk', 'Mỹ', 'baihat/katy_perry_birthday_lyric_video_260362.mp3', 'admin'),
 (36, 'Blowin in the Wind', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/don_t_think_twice_it_s_all_right_bob_dylan_388541.mp3', 'admin'),
 (37, 'Girl from the North Country', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/girl_from_the_north_country_bob_dylan_388560.mp3', 'admin'),
@@ -81,10 +81,23 @@ INSERT INTO `baihat` (`idBaiHat`, `tenBaiHat`, `tenTheLoai`, `tenCaSi`, `tenNhom
 (39, 'Down the Highway', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/girl_from_the_north_country_bob_dylan_388560.mp3', 'admin'),
 (40, 'Dont Think Twice, It is All Right', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/don_t_think_twice_it_s_all_right_bob_dylan_388541.mp3', 'admin'),
 (41, 'Highway 51 Blues', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/frank_sinatra_killing_me_softly_236084.mp3', 'admin'),
-(42, 'Oxford Town', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/frank_sinatra_my_way_268632.mp3', 'admin'),
-(43, 'Man of Constant Sorrow', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/frank_sinatra_killing_me_softly_236084.mp3', 'admin'),
-(44, 'I Shall Be Free ', 'folk', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/girl_from_the_north_country_bob_dylan_388560.mp3', 'admin'),
-(46, 'Missing you', 'hiphop', 'G-Dragon', 'kpop', 'Hàn Quốc', 'baihat\\MissingYou.mp3', 'admin');
+(42, 'Oxford Town', 'latin', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/frank_sinatra_my_way_268632.mp3', 'admin'),
+(43, 'Man of Constant Sorrow', 'latin', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/frank_sinatra_killing_me_softly_236084.mp3', 'admin'),
+(44, 'I Shall Be Free ', 'latin', 'Bob Dylan', 'usuk', 'Mỹ', 'baihat/girl_from_the_north_country_bob_dylan_388560.mp3', 'admin'),
+(46, 'Missing you', 'hiphop', 'G-Dragon', 'kpop', 'Hàn Quốc', 'baihat\\MissingYou.mp3', 'admin'),
+(47, 'Untitled 2014', 'hiphop', 'G-Dragon', 'kpop', 'Hàn Quốc', 'baihat/g_dragon_untitled_2014_m_v.mp3', 'admin'),
+(48, 'Your cent', 'hiphop', 'Leessang', 'kpop', 'Hàn Quốc', 'baihat/your_scent_kang_gary_jung_in_engsub_304955.mp3', 'admin'),
+(49, 'Remembrance', 'hiphop', 'Leessang', 'kpop', 'Hàn Quốc', 'baihat/vietsub_leessang_ft_baek_ji_young_remembrance_haha_team_279997.mp3', 'admin'),
+(50, 'Tears', 'hiphop', 'Leessang', 'kpop', 'Hàn Quốc', 'baihat/leessang_tears_lip_ver_feat_eugene_of_the_seeya_mv_388824.mp3', 'admin'),
+(51, 'Haru haru', 'hiphop', 'BingBang', 'kpop', 'Hàn Quốc', 'baihat/bigbang_haru_haru_m_v.mp3', 'admin'),
+(52, 'Loser', 'hiphop', 'BingBang', 'kpop', 'Hàn Quốc', 'baihat/bigbang_loser_m_v_222733.mp3', 'admin'),
+(53, 'Eyes, Nose, Lips', 'hiphop', 'Taeyang', 'kpop', 'Hàn Quốc', 'baihat/taeyang_eyes_nose_lips_m_v.mp3', 'admin'),
+(54, 'Wedding dress ', 'hiphop', 'Taeyang', 'kpop', 'Hàn Quốc', 'baihat/taeyang_wedding_dress_m_v_hd.mp3', 'admin'),
+(55, 'Under Pressure ', 'rock', 'Queen', 'usuk', 'Anh', 'baihat/queen_under_pressure_official_video_375890.mp3', 'admin'),
+(56, 'I Want To Break Free', 'rock', 'Queen', 'usuk', 'Anh', 'baihat/queen_i_want_to_break_free_official_video_303864.mp3', 'admin'),
+(57, 'Somebody to love', 'rock', 'Queen', 'usuk', 'Anh', 'baihat/queen_somebody_to_love_high_definition_388849.mp3', 'admin'),
+(58, 'Love of my life', 'rock', 'Queen', 'usuk', 'Anh', 'baihat/queen_love_of_my_life_388853 (1).mp3', 'admin'),
+(59, 'Hotel California', 'rock', 'Eagles', 'usuk', 'Mỹ', 'baihat/eagles_hotel_california_lyrics.mp3', 'admin');
 
 -- --------------------------------------------------------
 
@@ -135,7 +148,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `baihat`
 --
 ALTER TABLE `baihat`
-  MODIFY `idBaiHat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `idBaiHat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
