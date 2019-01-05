@@ -183,7 +183,7 @@
 		
 	<!--Xem dữ liệu cho database-->
 		<div style="display: none;" id="view" >
-			<h1>Xem dữ liệu</h1>
+			<h1>Xem dữ liệu bài hát</h1>
 			<table  id="viewcontent" style="font-size: 0.8em; overflow: auto; width: 100%;">
 			<tr>
 				<th>ID bài hát </th>
@@ -215,6 +215,39 @@
 					<td><?php echo $row['quocGia']  ?></td>
 					<!--<td><?php //echo $row['path']  ?></td>-->
 					<td><?php echo $row['dangBoi']  ?></td>
+				</tr>
+			<?php
+				
+					}
+				}
+			?>
+			</table>
+			<br>
+			<br>
+			<h1>Dữ liệu người dùng</h1>
+			<table  id="viewcontent" style="font-size: 0.8em; overflow: auto; width: 100%;">
+			<tr>
+				<th>ID người dùng </th>
+				<th>Username </th>
+				<th>Email</th>
+				<th>Phân quyền</th>
+			</tr>
+			<?php
+			
+				include "connection.php";
+				mysqli_set_charset($conn,"UTF8");
+				$sql = "SELECT * FROM users WHERE phanquyen= 0";
+				$kt = mysqli_query($conn, $sql);
+				if(mysqli_num_rows($kt)>0 ){
+					while($row = mysqli_fetch_assoc($kt)){
+						
+					
+			?>
+				<tr>
+					<td><?php echo $row['idUser']  ?></td>
+					<td><?php echo $row['username']  ?></td>
+					<td><?php echo $row['email']  ?></td>
+					<td><?php echo 'User'  ?></td>
 				</tr>
 			<?php
 				
