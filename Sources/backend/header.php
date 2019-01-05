@@ -27,9 +27,9 @@
 				</div>
 				<!-----Header Search----->
 				<div class="col-md-5" id="headersearch">
- 					<form name="search" method="post">
+ 					<form name="search" method="GET">
 	 					<!-----Thanh tim kiem----->
-						<input type="search" name="search" placeholder="Tìm ca khúc, ca sĩ, album,...">
+						<input type="search" name="search" placeholder="Tìm ca khúc, ca sĩ, album,..." onkeyup="showHint(this.value)">
 						<!-----Nut bam tim kiem----->
 						<button id="btn" type="submit">
 							<span class="icon">
@@ -37,7 +37,26 @@
 							</span>
 						</button>
 					</form>
+					<span id="txtHint"></span>
 				</div>
+
+				<script>
+					function showHint(str) {
+					    if (str.length == 0) { 
+					        document.getElementById("txtHint").innerHTML = "";
+					        return;
+					    } else {
+					        var xmlhttp = new XMLHttpRequest();
+					        xmlhttp.onreadystatechange = function() {
+					            if (this.readyState == 4 && this.status == 200) {
+					                document.getElementById("txtHint").innerHTML = this.responseText;
+					            }
+					        };
+					        xmlhttp.open("GET", "search.php?q=" + str, true);
+					        xmlhttp.send();
+					    }
+					}
+					</script>
 				<!-----Upload, Sign in, Sign up----->
 				<div class="col-md-5" id="headermenu">
 					<nav>
